@@ -9,6 +9,6 @@ RUN curl -L https://github.com/a8m/envsubst/releases/download/v1.1.0/envsubst-`u
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
   apt-get update && \
   apt-get install -y nodejs yarn python3-pip zip jq nuget && \
-  pip3 install awscli --upgrade --user &&\
-  export PATH=~/.local/bin:$PATH &&\
+  pip3 install awscli --upgrade &&\
+  export PATH=~/.local/bin:/root/.dotnet/tools/:$PATH &&\
   rm -rf /var/lib/apt/lists/*
